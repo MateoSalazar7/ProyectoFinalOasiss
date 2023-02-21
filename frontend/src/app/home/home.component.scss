@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 6px;
+  text-align: center;
+  color: white;
+  background: #1C2833;
+}
+
+.spanFooter{
+  color: #D4AC0D ;
+}
+
+.spanHeader{
+  color: white;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 25%;
+  padding: 20px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+body {
+  background-color: #384047;
+}
+
+.wrapper {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background-color: #1C2833;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+}
+
+ul li a {
+  margin-left: 1.5em;
+}
+
+a.logo {
+  margin-right: auto;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #D4AC0D;
+  position: relative;
+  font-size: 1.25em;
+}
+
+a::after {
+  content:"";
+  top: 80%;
+  border-bottom: 2px solid #FFFFFF;
+  transition: all 0.35s;
+  position: absolute;
+}
+
+a:hover::after {
+  transition: all 0.35s;
+}
+
+a::after {
+  right: 50%;
+  left: 50%;
+}
+
+a:hover::after {
+  right: 0;
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    height: auto;
+  }
+  
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  a.logo {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-right: 0px;
+  }
+  
+  ul {
+    width: 100%;
+    margin-bottom: 1em;
+    justify-content: space-between;
+  }
+  
+  ul li a {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  a.logo {
+    margin: 1.5em;
+  }
+  
+  ul {
+    flex-direction: column;
+  }
+  
+  ul li {
+    margin: 0.3em;
+    text-align: center;
+  }
+  
+  ul li a {
+    margin-left: 0px;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+}
+
+.mat-icon {
+  vertical-align: middle;
+}
+.bg-image {
+  /* The image used */
+  // background-image: url("../../assets/img/6.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // z-index: 2;
+  width: 55%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url(https://media0.giphy.com/media/YlVVFDDt4Tem6yAgO3/giphy.gif?cid=ecf05e47i7f46fmnake427puqe5nfko65n086r82cb1h0sz6&rid=giphy.gif&ct=g) center center;
+  background-size: cover;
+  position: relative;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .container {
+  position: relative;
+  padding-top: 74px;
+  text-align: center;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero h1 span {
+  color: rgb(199, 100, 184);
+}
+
+#hero h2 span {
+  color: rgb(58, 208, 243);
+}
+
+#hero h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 100vh;
+  }
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+#header .logo img {
+  max-height: 90px;
+}
+
+section {
+    padding: 50px 0;
+    overflow: hidden;
+  }
+  
+  .section-title {
+    padding-bottom: 40px;
+  }
+  
+  .section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 3px;
+    display: inline-block;
+    background: rgb(199, 100, 184);
+    margin: 4px 10px;
+  }
+  
+  .section-title p {
+    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #151515;
+  }
